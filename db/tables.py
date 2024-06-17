@@ -25,3 +25,14 @@ CREATE TABLE IF NOT EXISTS raw.imdb (
 )
 STORED AS PARQUET;
 """
+
+create_stream_actors = """
+CREATE TABLE IF NOT EXISTS streaming.actors (
+    person_id INT,
+    name STRING,
+    characterType STRING,
+    role STRING,
+    timeMark STRING
+)
+STORED AS PARQUET;
+"""

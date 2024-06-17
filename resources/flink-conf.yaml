@@ -1,0 +1,16 @@
+execution:
+  type: streaming
+  result-mode: table
+  planner: blink
+  current-database: streaming
+  current-catalog: myhive
+
+catalogs:
+  - name: myhive
+    type: hive
+    hive-version: 2.1.1-cdh6.0.1
+    hive-conf-dir: "/Users/manuelmontero/MM_DLK/MyDatalake/docker/hive_conf"
+
+deployment:
+  m: yarn-cluster
+  yqu: ABC_XYZ

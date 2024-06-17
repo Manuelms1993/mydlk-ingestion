@@ -1,3 +1,4 @@
 
 
 rawdb = "CREATE DATABASE IF NOT EXISTS raw"
+streamdb = "CREATE DATABASE IF NOT EXISTS streaming"

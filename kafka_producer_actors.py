@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 from kafka import KafkaProducer
@@ -23,8 +25,9 @@ def send_to_kafka():
         record = {
             'person_id': row['person_id'],
             'name': row['name'],
-            'character': row['character'],
-            'role': row['role']
+            'characterType': row['character'],
+            'role': row['role'],
+            'timeMark': datetime.now().strftime("%Y%m%d %H%M%S")
         }
         producer.send(actors_topic, value=record)
         print(f"Sent message: {record}")
