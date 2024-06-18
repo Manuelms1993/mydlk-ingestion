@@ -1,3 +1,5 @@
+import os
+
 from pyspark.sql import SparkSession
 
 # Initialize Spark session with Hive support

@@ -1,3 +1,4 @@
+from datetime import datetime
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col
@@ -21,6 +22,7 @@ class KafkaSource(Source):
             batch_df.write \
                 .mode("append") \
                 .insertInto("streaming.actors")
+            print("Data inserted " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
 
         stream = spark.readStream.format("kafka") \
             .option("subscribe", "actors_topic") \
