@@ -15,5 +15,5 @@ class Source:
 
     def createStructure(self, spark):
         spark.sql(streamdb)
-        spark.sql("DROP TABLE IF EXISTS streaming.actors")
+        #spark.sql("DROP TABLE IF EXISTS streaming.actors")
         spark.sql(create_stream_actors)
