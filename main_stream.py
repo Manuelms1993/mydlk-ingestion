@@ -3,7 +3,7 @@ import os
 from pyspark.sql import SparkSession
 
 # Initialize Spark session with Hive support
-from batch.sources.fileSource import FileSource
+from batch.sources.fileSourceToHive import FileSource
 from streaming.sources.kafkaSource import KafkaSource
 from streaming.utils import createHiveStreamingTables
 
