@@ -1,7 +1,5 @@
 from datetime import datetime
 
-from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 from kafka import KafkaProducer
 import json
 import pandas as pd
