@@ -6,8 +6,8 @@ from db.tables import create_raw_imdb_schema, create_raw_films_schema
 if __name__ == "__main__":
 
     files = {
-        'raw.films': 'file:/Users/manuelmontero/MM_DLK/MyDatalake/datasets/films.csv',
-        'raw.imdb': "file:/Users/manuelmontero/MM_DLK/MyDatalake/datasets/imdb.csv"
+        'raw.films': 'file:/home/manuel-montero/MM_DLK/MyDatalake/datasets/films.csv',
+        'raw.imdb': "file:/home/manuel-montero/MM_DLK/MyDatalake/datasets/imdb.csv"
     }
 
     spark = SparkSession.builder \

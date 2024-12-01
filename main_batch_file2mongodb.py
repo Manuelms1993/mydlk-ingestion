@@ -20,7 +20,7 @@ if __name__ == "__main__":
     collection = db[collection_name]
 
     # Read data from CSV file
-    df = pandas.read_csv('/Users/manuelmontero/MM_DLK/MyDatalake/datasets/movie_dataset.csv')
+    df = pandas.read_csv('/home/manuel-montero/MM_DLK/MyDatalake/datasets/movie_dataset.csv')
     data = df.to_dict(orient='records')
 
     # Insert data into the collection
